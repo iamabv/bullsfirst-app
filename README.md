@@ -4,6 +4,6 @@ Built the project using Html, CSS, angularjs and javascript
 
 Steps to get this project:
 
-git clone https://github.com/therkreddy/egen-fe-challenge.git
+git clone https://github.com/iamabv/bullsfirst-app-angularjs-.git
 
-cd egen-fe-challenge
+cd bullsfirst-app-angularjs-
