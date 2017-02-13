@@ -1,0 +1,162 @@
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", "Arial", "sans-serif";
+
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+button {
+    width: 119px;
+    background: orange;
+    border: 1px solid #E42F2F;
+    margin-right: 27px;
+    box-shadow: 1px 1px 3px #333;
+    background-color: #E42F2F;
+    height: 81px;
+}
+
+table {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+table td {
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+/* Header */
+#header {
+    display: flex;
+    background: orange;
+    padding: 30px 20px;
+    position: relative;
+    left: -141px;
+    width: 1280px;
+    overflow-x: hidden;
+}
+#header .logo{
+    position: relative;
+    left: 108px;
+}
+#header .logo h1 {
+    margin: 3px 0;
+}
+
+#header .logo .subtitle {
+font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    left: 25px;
+    font-style: italic;
+    top: -7px;
+}
+.actions{
+    position: relative;
+    right: 142px;
+}
+#header .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+#header .actions button {
+}
+
+#content {
+    display: flex;
+    margin-top: 20px;
+}
+/* Left Section */
+
+.left-section {
+    flex: 1;
+    margin-right: 92px;
+    position: relative;
+    left: -6px;
+}
+.left-section .header {
+     display: flex;
+    height: 30px;
+    position: relative;
+    left: 13px;
+    font-size: 17px;
+}
+
+.left-section .header button {
+    height: 25px;
+}
+.left-section .header > .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: 18px;
+}
+
+table th {
+    background: #ccc;
+    padding: 5px;
+}
+.totals td {
+    border-top: 3px solid #ccc;
+}
+
+.legend {
+    width: 30px;
+    height: 16px;
+}
+
+/* Right Section */
+.right-section {
+ width: 300px;
+    background: #ccc;
+    position: relative;
+    top: 40px;
+    height: 335px;
+    left: -19px;
+}
+.right-section .chart {
+    height: 300px;
+}
+
+.right-section .help-label {
+    padding: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+    font-style: italic;
+}
+.trade,.transfer,.add,.refresh{
+    color: white;
+}
+.add,.refresh{
+    text-align: left;
+        background-color: orange;
+    border-color: orange;
+width: 107px;
+}
+.add-account,.reload{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 12px;
+    margin-top: 2px;
+    top: 2px;
+}
+.trade1,.transfer{
+    color: white;
+    top: -13px;
+    font-size: 14px;
+}
+.transfer{
+    top: -3px;
+}

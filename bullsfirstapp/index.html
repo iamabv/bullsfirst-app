@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bullsfirst">
+<head>
+    <meta charset="UTF-8">
+    <title>Bullsfirst</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <!-- Libs -->
+    <script src="jquery-2.2.0.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Application -->
+
+    <script src="app.js"></script>
+    <script src="AccountsController.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="logo">
+            <h1>bullsfirst</h1>
+            <div class="subtitle">Calling All Bull Markets</div>
+        </div>
+        <div class="actions">
+            <button>
+                <br><span class="glyphicon glyphicon-star-empty trade1"><br>Trade</span></button>
+            <button><span class=" glyphicon glyphicon-log-in transfer"><br>Transfer</span></button>
+        </div>
+    </div>
+    <!-- Content -->
+    <div id="content" ng-controller="AccountsController">
+        <div class="left-section">
+            <div class="header">
+                <strong>Accounts</strong>
+                <div class="actions">
+                    <button ng-click="addAccount()" class="glyphicon glyphicon-plus-sign add"><span class="add-account">Add Account</span></button>
+                    <button class="glyphicon glyphicon-refresh refresh" ng-click="reloadPage()"><span class="reload">Refresh</span></button>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Market Value</th>
+                    <th>Cash</th>
+                    <th>Legend</th>
+                </tr>
+
+                <tr ng-repeat="row in accounts">
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.marketValue | currency }}</td>
+                    <td>{{ row.cash | currency }}</td>
+                    <td>
+                        <div class="legend" style="background-color: {{ row.legend }}"></div>
+                    </td>
+                </tr>
+
+                <tr class="totals">
+                    <td></td>
+                    <td>
+                        <strong>{{ totalvalue.marketValue | currency }}</strong>
+                    </td>
+                    <td>
+                        <strong>{{ totalvalue.cash | currency }}</strong>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="right-section">
+            <img class="chart" src="chart.png" alt="Chart">
+            <div class="help-label">Click on an account to view positions</div>
+        </div>
+    </div>
+</body>
+</html>
